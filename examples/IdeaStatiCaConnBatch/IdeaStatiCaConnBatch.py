@@ -126,6 +126,9 @@ def process_connections(run_inputs, working_folder : Path):
         conn_client.save_project()
         print('done.')
         
+        
+        code_setup = conn_client.get_code_setup()
+        
         print(f"\t> Calculating connection model... ", end='')
         conn_client.connections[conn_index].calculate()
         print('done.')
