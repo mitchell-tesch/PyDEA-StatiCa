@@ -5,6 +5,7 @@ __all__ = ['Connection']
 
 # general imports
 import json
+import xml.etree.ElementTree as ET
 
 # import the iom and isapi (plugin)
 from pydea_statica.idea_statica_config import *
@@ -50,9 +51,8 @@ class Connection():
     def export_to_template(self, file_path : str):
         self.__client.ExportToTemplate(self.identifier, file_path)
     
-    def get_all_data_xml(self):
-        # TODO returns XML - add parsing 
-        return self.__client.GetAllConnectionData(self.identifier)
+    def get_all_data_xml(self) -> ET.Element:
+        return ET.fromstring(self.__client.GetAllConnectionData(self.identifier))
     
     def get_cost(self):
         return json.loads(self.__client.GetConnectionCost(self.identifier) or '{}')
@@ -68,9 +68,8 @@ class Connection():
         # TODO returns IdeaRS.OpenModel.Connection ConnectionData (parsing?)
         return self.__client.GetConnectionModel(self.identifier)
     
-    def get_model_xml(self):
-        # TODO returns XML - add parsing 
-        return self.__client.GetConnectionModelXML(self.identifier)
+    def get_model_xml(self) -> ET.Element:
+        return ET.fromstring(self.__client.GetConnectionModelXML(self.identifier))
     
     def get_results_json(self):
         results_json = json.loads(self.__client.GetCheckResultsJSON(self.identifier) or '{}')
