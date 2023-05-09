@@ -72,8 +72,9 @@ class Connection():
         return ET.fromstring(self.__client.GetConnectionModelXML(self.identifier))
     
     def get_results_json(self):
-        results_json = json.loads(self.__client.GetCheckResultsJSON(self.identifier) or '{}')
-        return ConnectionResults(results_json)
+        json_string = self.__client.GetCheckResultsJSON(self.identifier)
+        if json_string not in  ['', ' ', 'Error']:
+            return ConnectionResults(json.loads(json_string))
     
     def get_parameters_json(self):
         return json.loads(self.__client.GetParametersJSON(self.identifier) or '{}')

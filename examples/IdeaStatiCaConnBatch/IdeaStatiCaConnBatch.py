@@ -9,7 +9,6 @@ from context import pydea_statica
 import xlwings as xw
 import pandas as pd
 from pathlib import Path
-import math
 import xml.etree.ElementTree as ET
 
 # pydea statica imports
@@ -24,6 +23,8 @@ HEADER_RANGE = 'B3:BO3'
 BEAM_INDEX = ['Beam1', 'Beam2', 'Beam3', 'Beam4', 'Beam5', 'Beam6']
 INT_TYPES = ['Position', 'AbsPosition', 'ForceIn']
 
+RESULTS_START = 'BQ4'
+
 
 def main():
     wb = xw.Book.caller()
@@ -35,7 +36,8 @@ def main():
     
     run_results = process_connections(run_inputs, working_folder)
     
-    print(run_results)
+    print(f"\nWriting connection check results...")
+    write_run_results(wb, run_results)
 
 
 def read_batching_workbook(wb : xw.Book):
@@ -137,15 +139,14 @@ def process_connections(run_inputs, working_folder : Path):
         print(f"\t> Creating output connection model... ", end='')
         out_conn_file = out_conn_folder.joinpath(conn_file_name)
         out_conn_file = out_conn_file.with_name(out_conn_file.stem + f'_{conn_name}_{case_name}' + out_conn_file.suffix)
-        conn_client.save_as_project(str(out_conn_file))
         print('done.')
         
         print(f"\t> Updating connection loading cases... ", end='')
         conn_client.connections[conn_index].set_loading(load_case)
-        conn_client.save_project()
         print('done.')
 
         print(f"\t> Calculating connection model... ", end='')
+        conn_client.save_as_project(str(out_conn_file))
         conn_client.connections[conn_index].calculate()
         print('done.')
         
@@ -155,12 +156,29 @@ def process_connections(run_inputs, working_folder : Path):
         
         run_results.append({'IdeaConFile': conn_file_name,
                             'ConnectionName': conn_name,
-                            'BatchId': run['BatchId'],
+                            'BatchId': run['BatchId'][0],
                             'Results': conn_results})
         
         conn_client.close_project()
     
     return run_results
+
+
+def write_run_results(wb : xw.Book, run_results):
+    sheet = wb.sheets(INPUT_SHEET)
+    
+    for run in run_results:
+        try:
+            total_capacity = run['Results'].totalCapacity.__dict__['1']
+            results_out = [total_capacity['appliedLoadPercentage'],
+                           total_capacity['maxPlateEps'],
+                           total_capacity['maxWeldEps']]
+        except KeyError:
+            results_out = ['Unavailable', '', '']
+            print(f"Error: Run {run['BatchId'] + 1} has no Design Resistance (DR) results, check connection {run['ConnectionName']} in {run['IdeaConFile']}.")
+        
+        for col, result in enumerate(results_out):
+            sheet.range(RESULTS_START).offset(row_offset=run['BatchId'], column_offset=col).value = result
 
 
 if __name__ == "__main__":
