@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module IdeaRS.OpenModel.Message calls itself Message
-# from IdeaRS.OpenModel, Version=22.1.5.1060, Culture=neutral, PublicKeyToken=null
+# from IdeaRS.OpenModel, Version=23.0.2.1543, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -166,7 +166,7 @@ Set: FileName(self: IOMSettings) = value
 
 
 class MessageNumber(Enum, IComparable, IFormattable, IConvertible):
-    """ enum (flags) MessageNumber, values: ErrBadWeldMaterialProperty (67108887), ErrBoltsTooClose (67108871), ErrBoltsTooCloseEdge (67108872), ErrContactsAngle (67108873), ErrCurveDecreaseFunction (67108880), ErrCurveDerivation (67108881), ErrCurveFunction (67108879), ErrCurveNotSet (67108882), ErrCurveZeroPoint (67108878), ErrDataObjectNotCreated (67108866), ErrIncorrectMaterialEGP (67108875), ErrIncorrentMaterialE (67108874), ErrNoCrossSectionParameter (67108870), ErrNoEquivalentObjectInDataModel (67108869), ErrNoInLibrary (67108886), ErrNoObjectInOpenModel (67108867), ErrNoOpenObject (67108865), ErrNoReferenceObjectInOpenModel (67108868), Error (67108864), ErrPreloadedBoltGrade (67108876), ErrTimeout (67108885), ErrValidPolyline (67108883), ErrValueOutOfRange (67108877), ErrWarningLoad (67108884), Information (16777216), Reserved (134217728), Unspecified (0), WarnCurveCount (33554435), Warning (33554432), WarnNoPropertyInData (33554433), WarnReinforcementBarsCollision (33554437), WarnValueOutOfRange (33554434) """
+    """ enum (flags) MessageNumber, values: ErrBadWeldMaterialProperty (67108887), ErrBoltsTooClose (67108871), ErrBoltsTooCloseEdge (67108872), ErrContactsAngle (67108873), ErrCurveDecreaseFunction (67108880), ErrCurveDerivation (67108881), ErrCurveFunction (67108879), ErrCurveNotSet (67108882), ErrCurveZeroPoint (67108878), ErrDataObjectNotCreated (67108866), ErrIncorrectMaterialEGP (67108875), ErrIncorrentMaterialE (67108874), ErrNoCrossSectionParameter (67108870), ErrNoEquivalentObjectInDataModel (67108869), ErrNoInLibrary (67108886), ErrNoObjectInOpenModel (67108867), ErrNoOpenObject (67108865), ErrNoReferenceObjectInOpenModel (67108868), ErrOperation (67108888), Error (67108864), ErrPreloadedBoltGrade (67108876), ErrTimeout (67108885), ErrValidPolyline (67108883), ErrValueOutOfRange (67108877), ErrWarningLoad (67108884), Information (16777216), Reserved (134217728), Unspecified (0), WarnCurveCount (33554435), Warning (33554432), WarnNoPropertyInData (33554433), WarnReinforcementBarsCollision (33554437), WarnValueOutOfRange (33554434) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -218,6 +218,7 @@ class MessageNumber(Enum, IComparable, IFormattable, IConvertible):
     ErrNoObjectInOpenModel = None
     ErrNoOpenObject = None
     ErrNoReferenceObjectInOpenModel = None
+    ErrOperation = None
     Error = None
     ErrPreloadedBoltGrade = None
     ErrTimeout = None

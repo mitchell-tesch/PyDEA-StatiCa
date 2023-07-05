@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module IdeaStatica.Communication calls itself Communication
-# from IdeaStatiCa.Plugin, Version=22.1.5.1060, Culture=neutral, PublicKeyToken=null
+# from IdeaStatiCa.Plugin, Version=23.0.2.1543, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports

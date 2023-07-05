@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module IdeaRS.OpenModel calls itself OpenModel
-# from IdeaRS.OpenModel, Version=22.1.5.1060, Culture=neutral, PublicKeyToken=null
+# from IdeaRS.OpenModel, Version=23.0.2.1543, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -60,6 +60,12 @@ class ConnectionSetup(object):
     """Get: AlphaCC(self: ConnectionSetup) -> float
 
 Set: AlphaCC(self: ConnectionSetup) = value
+"""
+
+    AnalysisAllGNL = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Get: AnalysisAllGNL(self: ConnectionSetup) -> bool
+
+Set: AnalysisAllGNL(self: ConnectionSetup) = value
 """
 
     AnalysisGNL = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
@@ -330,6 +336,12 @@ Set: NumberIterations(self: ConnectionSetup) = value
     """Get: NumElement(self: ConnectionSetup) -> int
 
 Set: NumElement(self: ConnectionSetup) = value
+"""
+
+    NumElementPlate = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Get: NumElementPlate(self: ConnectionSetup) -> int
+
+Set: NumElementPlate(self: ConnectionSetup) = value
 """
 
     NumElementRhs = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default

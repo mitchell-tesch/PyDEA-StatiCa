@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module IdeaRS.OpenModel.Detail calls itself Detail
-# from IdeaRS.OpenModel, Version=22.1.5.1060, Culture=neutral, PublicKeyToken=null
+# from IdeaRS.OpenModel, Version=23.0.2.1543, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -1628,12 +1628,6 @@ Set: MasterComponent(self: Wall) = value
     """Get: MasterPoint(self: Wall) -> int
 
 Set: MasterPoint(self: Wall) = value
-"""
-
-    Name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Name(self: Wall) -> str
-
-Set: Name(self: Wall) = value
 """
 
     Position = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default

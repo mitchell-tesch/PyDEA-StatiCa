@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module IdeaRS.OpenModel.Geometry3D calls itself Geometry3D
-# from IdeaRS.OpenModel, Version=22.1.5.1060, Culture=neutral, PublicKeyToken=null
+# from IdeaRS.OpenModel, Version=23.0.2.1543, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -206,6 +206,12 @@ Set: Segments(self: PolyLine3D) = value
 
 class Region3D(OpenElementId):
     """ Region3D() """
+    LocalCoordinateSystem = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Get: LocalCoordinateSystem(self: Region3D) -> CoordSystem
+
+Set: LocalCoordinateSystem(self: Region3D) = value
+"""
+
     Openings = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
     """Get: Openings(self: Region3D) -> List[ReferenceElement]
 

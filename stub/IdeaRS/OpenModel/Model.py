@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module IdeaRS.OpenModel.Model calls itself Model
-# from IdeaRS.OpenModel, Version=22.1.5.1060, Culture=neutral, PublicKeyToken=null
+# from IdeaRS.OpenModel, Version=23.0.2.1543, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -226,6 +226,12 @@ Set: InnerPoints(self: Element2D) = value
     """Get: Material(self: Element2D) -> ReferenceElement
 
 Set: Material(self: Element2D) = value
+"""
+
+    Name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Get: Name(self: Element2D) -> str
+
+Set: Name(self: Element2D) = value
 """
 
     Thickness = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default

@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module IdeaStatiCa.Plugin calls itself Plugin
-# from IdeaStatiCa.Plugin, Version=22.1.5.1060, Culture=neutral, PublicKeyToken=null
+# from IdeaStatiCa.Plugin, Version=23.0.2.1543, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -10,8 +10,7 @@
 
 class ApplicationBIM(object, IApplicationBIM):
     """
-    ApplicationBIM()
-
+    ApplicationBIM()
     ApplicationBIM(logger: IPluginLogger)
     """
     def ActivateInBIM(self, items):
@@ -77,8 +76,7 @@ class ApplicationBIM(object, IApplicationBIM):
     @staticmethod # known case of __new__
     def __new__(self, logger=None):
         """
-        __new__(cls: type)
-
+        __new__(cls: type)
         __new__(cls: type, logger: IPluginLogger)
         """
         pass
@@ -90,28 +88,20 @@ class ApplicationBIM(object, IApplicationBIM):
     ApplicationName = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
     Id = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Id(self: ApplicationBIM) -> int
-
-
-
+    """Get: Id(self: ApplicationBIM) -> int
+
 """
 
     IdeaStaticaApp = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: IdeaStaticaApp(self: ApplicationBIM) -> IIdeaStaticaApp
-
-
-
-Set: IdeaStaticaApp(self: ApplicationBIM) = value
-
+    """Get: IdeaStaticaApp(self: ApplicationBIM) -> IIdeaStaticaApp
+
+Set: IdeaStaticaApp(self: ApplicationBIM) = value
 """
 
     Progress = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Progress(self: ApplicationBIM) -> IProgressMessaging
-
-
-
-Set: Progress(self: ApplicationBIM) = value
-
+    """Get: Progress(self: ApplicationBIM) -> IProgressMessaging
+
+Set: Progress(self: ApplicationBIM) = value
 """
 
 
@@ -200,42 +190,30 @@ class AutomationHosting(object, IBIMPluginClient[ClientInterface], IDisposable):
         pass
 
     HostingTask = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: HostingTask(self: AutomationHosting[MyInterface, ClientInterface]) -> Task
-
-
-
-Set: HostingTask(self: AutomationHosting[MyInterface, ClientInterface]) = value
-
+    """Get: HostingTask(self: AutomationHosting[MyInterface, ClientInterface]) -> Task
+
+Set: HostingTask(self: AutomationHosting[MyInterface, ClientInterface]) = value
 """
 
     MyBIM = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: MyBIM(self: AutomationHosting[MyInterface, ClientInterface]) -> ClientInterface
-
-
-
+    """Get: MyBIM(self: AutomationHosting[MyInterface, ClientInterface]) -> ClientInterface
+
 """
 
     Service = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Service(self: AutomationHosting[MyInterface, ClientInterface]) -> MyInterface
-
-
-
+    """Get: Service(self: AutomationHosting[MyInterface, ClientInterface]) -> MyInterface
+
 """
 
     ServiceBaseAddress = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: ServiceBaseAddress(self: AutomationHosting[MyInterface, ClientInterface]) -> str
-
-
-
-Set: ServiceBaseAddress(self: AutomationHosting[MyInterface, ClientInterface]) = value
-
+    """Get: ServiceBaseAddress(self: AutomationHosting[MyInterface, ClientInterface]) -> str
+
+Set: ServiceBaseAddress(self: AutomationHosting[MyInterface, ClientInterface]) = value
 """
 
     Status = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Status(self: AutomationHosting[MyInterface, ClientInterface]) -> AutomationStatus
-
-
-
+    """Get: Status(self: AutomationHosting[MyInterface, ClientInterface]) -> AutomationStatus
+
 """
 
 
@@ -288,26 +266,19 @@ class AutomationHostingGrpc(object, IGrpcCommunicationCommonInterface, IBIMPlugi
     EventName = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
     IsConnected = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: IsConnected(self: AutomationHostingGrpc[MyInterface, ClientInterface]) -> bool
-
-
-
+    """Get: IsConnected(self: AutomationHostingGrpc[MyInterface, ClientInterface]) -> bool
+
 """
 
     MyBIM = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: MyBIM(self: AutomationHostingGrpc[MyInterface, ClientInterface]) -> ClientInterface
-
-
-
-Set: MyBIM(self: AutomationHostingGrpc[MyInterface, ClientInterface]) = value
-
+    """Get: MyBIM(self: AutomationHostingGrpc[MyInterface, ClientInterface]) -> ClientInterface
+
+Set: MyBIM(self: AutomationHostingGrpc[MyInterface, ClientInterface]) = value
 """
 
     Status = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Status(self: AutomationHostingGrpc[MyInterface, ClientInterface]) -> AutomationStatus
-
-
-
+    """Get: Status(self: AutomationHostingGrpc[MyInterface, ClientInterface]) -> AutomationStatus
+
 """
 
 
@@ -365,33 +336,24 @@ class AutomationService(object, IAutomation, IClientBIM[ClientInterface], IDispo
         pass
 
     BIM = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: BIM(self: AutomationService[ClientInterface]) -> ClientInterface
-
-
-
-Set: BIM(self: AutomationService[ClientInterface]) = value
-
+    """Get: BIM(self: AutomationService[ClientInterface]) -> ClientInterface
+
+Set: BIM(self: AutomationService[ClientInterface]) = value
 """
 
     ProjectDir = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: ProjectDir(self: AutomationService[ClientInterface]) -> str
-
-
-
+    """Get: ProjectDir(self: AutomationService[ClientInterface]) -> str
+
 """
 
     Status = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Status(self: AutomationService[ClientInterface]) -> AutomationStatus
-
-
-
+    """Get: Status(self: AutomationService[ClientInterface]) -> AutomationStatus
+
 """
 
     TempWorkingDir = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: TempWorkingDir(self: AutomationService[ClientInterface]) -> str
-
-
-
+    """Get: TempWorkingDir(self: AutomationService[ClientInterface]) -> str
+
 """
 
 
@@ -439,21 +401,15 @@ class AutomationStatus(Enum, IComparable, IFormattable, IConvertible):
 class BIMItemId(object):
     """ BIMItemId() """
     Id = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Id(self: BIMItemId) -> int
-
-
-
-Set: Id(self: BIMItemId) = value
-
+    """Get: Id(self: BIMItemId) -> int
+
+Set: Id(self: BIMItemId) = value
 """
 
     Type = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Type(self: BIMItemId) -> BIMItemType
-
-
-
-Set: Type(self: BIMItemId) = value
-
+    """Get: Type(self: BIMItemId) -> BIMItemType
+
+Set: Type(self: BIMItemId) = value
 """
 
 
@@ -461,30 +417,21 @@ Set: Type(self: BIMItemId) = value
 class BIMItemsGroup(object):
     """ BIMItemsGroup() """
     Id = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Id(self: BIMItemsGroup) -> int
-
-
-
-Set: Id(self: BIMItemsGroup) = value
-
+    """Get: Id(self: BIMItemsGroup) -> int
+
+Set: Id(self: BIMItemsGroup) = value
 """
 
     Items = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Items(self: BIMItemsGroup) -> List[BIMItemId]
-
-
-
-Set: Items(self: BIMItemsGroup) = value
-
+    """Get: Items(self: BIMItemsGroup) -> List[BIMItemId]
+
+Set: Items(self: BIMItemsGroup) = value
 """
 
     Type = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Type(self: BIMItemsGroup) -> RequestedItemsType
-
-
-
-Set: Type(self: BIMItemsGroup) = value
-
+    """Get: Type(self: BIMItemsGroup) -> RequestedItemsType
+
+Set: Type(self: BIMItemsGroup) = value
 """
 
 
@@ -570,19 +517,14 @@ class BIMPluginHosting(object, IBIMPluginHosting, IDisposable):
         pass
 
     HostingTask = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: HostingTask(self: BIMPluginHosting) -> Task
-
-
-
-Set: HostingTask(self: BIMPluginHosting) = value
-
+    """Get: HostingTask(self: BIMPluginHosting) -> Task
+
+Set: HostingTask(self: BIMPluginHosting) = value
 """
 
     Service = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Service(self: BIMPluginHosting) -> IApplicationBIM
-
-
-
+    """Get: Service(self: BIMPluginHosting) -> IApplicationBIM
+
 """
 
 
@@ -625,37 +567,26 @@ class BIMPluginHostingGrpc(object, IBIMPluginHosting, IDisposable):
         pass
 
     EventName = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: EventName(self: BIMPluginHostingGrpc) -> str
-
-
-
-Set: EventName(self: BIMPluginHostingGrpc) = value
-
+    """Get: EventName(self: BIMPluginHostingGrpc) -> str
+
+Set: EventName(self: BIMPluginHostingGrpc) = value
 """
 
     GrpcServer = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: GrpcServer(self: BIMPluginHostingGrpc) -> GrpcReflectionServer
-
-
-
+    """Get: GrpcServer(self: BIMPluginHostingGrpc) -> GrpcReflectionServer
+
 """
 
     IdeaStaticaApp = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: IdeaStaticaApp(self: BIMPluginHostingGrpc) -> Process
-
-
-
-Set: IdeaStaticaApp(self: BIMPluginHostingGrpc) = value
-
+    """Get: IdeaStaticaApp(self: BIMPluginHostingGrpc) -> Process
+
+Set: IdeaStaticaApp(self: BIMPluginHostingGrpc) = value
 """
 
     Service = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Service(self: BIMPluginHostingGrpc) -> IApplicationBIM
-
-
-
-Set: Service(self: BIMPluginHostingGrpc) = value
-
+    """Get: Service(self: BIMPluginHostingGrpc) -> IApplicationBIM
+
+Set: Service(self: BIMPluginHostingGrpc) = value
 """
 
 
@@ -665,12 +596,9 @@ Set: Service(self: BIMPluginHostingGrpc) = value
 class BIMProject(object):
     """ BIMProject() """
     CountryCode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: CountryCode(self: BIMProject) -> CountryCode
-
-
-
-Set: CountryCode(self: BIMProject) = value
-
+    """Get: CountryCode(self: BIMProject) -> CountryCode
+
+Set: CountryCode(self: BIMProject) = value
 """
 
 
@@ -838,12 +766,9 @@ class ConnectionHiddenCheckClient(ClientBase[IConnHiddenCheck], ICommunicationOb
 
     def CreateChannel(self, *args): #cannot find CLR method
         """
-        CreateChannel(self: ClientBase[IConnHiddenCheck]) -> IConnHiddenCheck
-
-        
-
-            Returns a new channel to the service.
-
+        CreateChannel(self: ClientBase[IConnHiddenCheck]) -> IConnHiddenCheck
+        
+            Returns a new channel to the service.
             Returns: A channel of the type of the service contract.
         """
         pass
@@ -970,10 +895,8 @@ class ConnectionHiddenCheckClient(ClientBase[IConnHiddenCheck], ICommunicationOb
         pass
 
     Channel = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Gets the inner channel used to send messages to variously configured service endpoints.
-
-
-
+    """Gets the inner channel used to send messages to variously configured service endpoints.
+
 """
 
     Service = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
@@ -1027,6 +950,7 @@ class Constants(object):
     DefaultIdeaStaticaAutoUrlFormat = 'net.pipe://localhost/IdeaStatiCaAuto{0}'
     DefaultPluginEventName = 'IdeaStatiCaBIMPluginEvent'
     DefaultPluginUrlFormat = 'net.pipe://localhost/IdeaBIMPlugin{0}'
+    DetailChangedEventFormat = 'IdeaStatiCaDetailChanged{0}'
     GrpcPortParam = '-grpcPort'
     GrpcReflectionErrorException = 'GrpcReflectionError'
     GRPC_CHECKBOT_HANDLER_MESSAGE = 'Grpc.Handlers.CheckBot'
@@ -1058,8 +982,7 @@ class ConversionDictionary(SerializableDictionary[TKey, int], IDictionary[TKey, 
 
     def GetKey(self, *args): #cannot find CLR method
         """
-        GetKey(self: ConversionDictionary[TKey], id: int) -> TKey
-
+        GetKey(self: ConversionDictionary[TKey], id: int) -> TKey
         GetKey(self: ConversionDictionary[TKey], name: str) -> TKey
         """
         pass
@@ -1104,8 +1027,7 @@ class ConversionDictionaryInt(ConversionDictionary[int], IDictionary[int, int], 
     """ ConversionDictionaryInt() """
     def GetKey(self, *args): #cannot find CLR method
         """
-        GetKey(self: ConversionDictionaryInt, id: int) -> int
-
+        GetKey(self: ConversionDictionaryInt, id: int) -> int
         GetKey(self: ConversionDictionaryInt, name: str) -> int
         """
         pass
@@ -1138,8 +1060,7 @@ class ConversionDictionaryString(ConversionDictionary[str], IDictionary[str, int
     """ ConversionDictionaryString() """
     def GetKey(self, *args): #cannot find CLR method
         """
-        GetKey(self: ConversionDictionaryString, id: int) -> str
-
+        GetKey(self: ConversionDictionaryString, id: int) -> str
         GetKey(self: ConversionDictionaryString, name: str) -> str
         """
         pass
@@ -1171,21 +1092,15 @@ class ConversionDictionaryString(ConversionDictionary[str], IDictionary[str, int
 class ProjectItem(object):
     """ ProjectItem() """
     Identifier = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Identifier(self: ProjectItem) -> int
-
-
-
-Set: Identifier(self: ProjectItem) = value
-
+    """Get: Identifier(self: ProjectItem) -> int
+
+Set: Identifier(self: ProjectItem) = value
 """
 
     Name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Name(self: ProjectItem) -> str
-
-
-
-Set: Name(self: ProjectItem) = value
-
+    """Get: Name(self: ProjectItem) -> str
+
+Set: Name(self: ProjectItem) = value
 """
 
 
@@ -1193,21 +1108,15 @@ Set: Name(self: ProjectItem) = value
 class CrossSectionProjectItem(ProjectItem):
     """ CrossSectionProjectItem() """
     MaterialIdentifier = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: MaterialIdentifier(self: CrossSectionProjectItem) -> int
-
-
-
-Set: MaterialIdentifier(self: CrossSectionProjectItem) = value
-
+    """Get: MaterialIdentifier(self: CrossSectionProjectItem) -> int
+
+Set: MaterialIdentifier(self: CrossSectionProjectItem) = value
 """
 
     MaterialName = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: MaterialName(self: CrossSectionProjectItem) -> str
-
-
-
-Set: MaterialName(self: CrossSectionProjectItem) = value
-
+    """Get: MaterialName(self: CrossSectionProjectItem) -> str
+
+Set: MaterialName(self: CrossSectionProjectItem) = value
 """
 
 
@@ -1333,24 +1242,18 @@ class IAutomation:
         pass
 
     ProjectDir = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: ProjectDir(self: IAutomation) -> str
-
-
-
+    """Get: ProjectDir(self: IAutomation) -> str
+
 """
 
     Status = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Status(self: IAutomation) -> AutomationStatus
-
-
-
+    """Get: Status(self: IAutomation) -> AutomationStatus
+
 """
 
     TempWorkingDir = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: TempWorkingDir(self: IAutomation) -> str
-
-
-
+    """Get: TempWorkingDir(self: IAutomation) -> str
+
 """
 
 
@@ -1381,17 +1284,13 @@ class IBIMPluginClient:
         pass
 
     MyBIM = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: MyBIM(self: IBIMPluginClient[T]) -> T
-
-
-
+    """Get: MyBIM(self: IBIMPluginClient[T]) -> T
+
 """
 
     Status = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Status(self: IBIMPluginClient[T]) -> AutomationStatus
-
-
-
+    """Get: Status(self: IBIMPluginClient[T]) -> AutomationStatus
+
 """
 
 
@@ -1409,17 +1308,13 @@ class IBIMPluginFactory:
         pass
 
     FeaAppName = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: FeaAppName(self: IBIMPluginFactory) -> str
-
-
-
+    """Get: FeaAppName(self: IBIMPluginFactory) -> str
+
 """
 
     IdeaStaticaAppPath = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: IdeaStaticaAppPath(self: IBIMPluginFactory) -> str
-
-
-
+    """Get: IdeaStaticaAppPath(self: IBIMPluginFactory) -> str
+
 """
 
 
@@ -1435,10 +1330,8 @@ class IBIMPluginHosting:
         pass
 
     Service = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Service(self: IBIMPluginHosting) -> IApplicationBIM
-
-
-
+    """Get: Service(self: IBIMPluginHosting) -> IApplicationBIM
+
 """
 
 
@@ -1452,12 +1345,9 @@ class IClientBIM:
         pass
 
     BIM = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: BIM(self: IClientBIM[B]) -> B
-
-
-
-Set: BIM(self: IClientBIM[B]) = value
-
+    """Get: BIM(self: IClientBIM[B]) -> B
+
+Set: BIM(self: IClientBIM[B]) = value
 """
 
 
@@ -1488,10 +1378,8 @@ class IConnectionController:
         pass
 
     IsConnected = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: IsConnected(self: IConnectionController) -> bool
-
-
-
+    """Get: IsConnected(self: IConnectionController) -> bool
+
 """
 
 
@@ -1505,12 +1393,19 @@ class IdeaConnectionController(object, IDisposable, IConnectionController):
         pass
 
     @staticmethod
-    def Create(ideaInstallDir):
-        """ Create(ideaInstallDir: str) -> IConnectionController """
+    def Create(ideaInstallDir, logger=None):
+        """
+        Create(ideaInstallDir: str) -> IConnectionController
+        Create(ideaInstallDir: str, logger: IPluginLogger) -> IConnectionController
+        """
         pass
 
     def Dispose(self):
         """ Dispose(self: IdeaConnectionController) """
+        pass
+
+    def OpenConnectionClient(self, *args): #cannot find CLR method
+        """ OpenConnectionClient(self: IdeaConnectionController) """
         pass
 
     def OpenProject(self, fileName):
@@ -1529,18 +1424,16 @@ class IdeaConnectionController(object, IDisposable, IConnectionController):
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
+    @staticmethod # known case of __new__
+    def __new__(self, *args): #cannot find CLR constructor
+        """ __new__(cls: type, ideaInstallDir: str, logger: IPluginLogger) """
+        pass
+
     def __repr__(self, *args): #cannot find CLR method
         """ __repr__(self: object) -> str """
         pass
 
-    ConnectionAppClient = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-
-    IsConnected = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: IsConnected(self: IdeaConnectionController) -> bool
-
-
-
-"""
+    GrpcClient = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
     UserMode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
@@ -1549,23 +1442,19 @@ class IdeaConnectionController(object, IDisposable, IConnectionController):
     CurrentItemChangedEvent = None
 
 
-class IdeaConnectionControllerGrpc(object, IDisposable, IConnectionController):
+class IdeaConnectionControllerGrpc(IdeaConnectionController, IDisposable, IConnectionController):
     # no doc
-    def CloseProject(self):
-        """ CloseProject(self: IdeaConnectionControllerGrpc) -> int """
-        pass
-
     @staticmethod
     def Create(ideaInstallDir, logger):
         """ Create(ideaInstallDir: str, logger: IPluginLogger) -> IConnectionController """
         pass
 
     def Dispose(self):
-        """ Dispose(self: IdeaConnectionControllerGrpc) """
+        """ Dispose(self: IdeaConnectionController, disposing: bool) """
         pass
 
-    def OpenProject(self, fileName):
-        """ OpenProject(self: IdeaConnectionControllerGrpc, fileName: str) -> int """
+    def OpenConnectionClient(self, *args): #cannot find CLR method
+        """ OpenConnectionClient(self: IdeaConnectionController) """
         pass
 
     def __enter__(self, *args): #cannot find CLR method
@@ -1580,16 +1469,11 @@ class IdeaConnectionControllerGrpc(object, IDisposable, IConnectionController):
         """ x.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signaturex.__init__(...) initializes x; see x.__class__.__doc__ for signature """
         pass
 
-    def __repr__(self, *args): #cannot find CLR method
-        """ __repr__(self: object) -> str """
-        pass
-
     GrpcClient = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
     UserMode = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
 
 
-    ConnectionAppExited = None
     CurrentItemChangedEvent = None
 
 
@@ -1623,16 +1507,16 @@ class IProgressMessaging:
         """ SendMessageInteractive(self: IProgressMessaging, severity: MessageSeverity, text: str, buttons: Array[str]) -> int """
         pass
 
-    def SendMessageLocalised(self, severity, msg):
-        """ SendMessageLocalised(self: IProgressMessaging, severity: MessageSeverity, msg: LocalisedMessage) """
+    def SendMessageLocalised(self, severity, msg, suffix):
+        """ SendMessageLocalised(self: IProgressMessaging, severity: MessageSeverity, msg: LocalisedMessage, suffix: str) """
         pass
 
     def SetStage(self, stage, stageMax, name):
         """ SetStage(self: IProgressMessaging, stage: int, stageMax: int, name: str) """
         pass
 
-    def SetStageLocalised(self, stage, stageMax, msg):
-        """ SetStageLocalised(self: IProgressMessaging, stage: int, stageMax: int, msg: LocalisedMessage) """
+    def SetStageLocalised(self, stage, stageMax, msg, args):
+        """ SetStageLocalised(self: IProgressMessaging, stage: int, stageMax: int, msg: LocalisedMessage, *args: Array[object]) """
         pass
 
     def SetStageProgress(self, percentage):
@@ -1687,12 +1571,9 @@ class IdeaStatiCaAppClient(ClientBase[IIdeaStaticaApp], ICommunicationObject, ID
 
     def CreateChannel(self, *args): #cannot find CLR method
         """
-        CreateChannel(self: ClientBase[IIdeaStaticaApp]) -> IIdeaStaticaApp
-
-        
-
-            Returns a new channel to the service.
-
+        CreateChannel(self: ClientBase[IIdeaStaticaApp]) -> IIdeaStaticaApp
+        
+            Returns a new channel to the service.
             Returns: A channel of the type of the service contract.
         """
         pass
@@ -1757,16 +1638,16 @@ class IdeaStatiCaAppClient(ClientBase[IIdeaStaticaApp], ICommunicationObject, ID
         """ SendMessageInteractive(self: IdeaStatiCaAppClient, severity: MessageSeverity, text: str, buttons: Array[str]) -> int """
         pass
 
-    def SendMessageLocalised(self, severity, msg):
-        """ SendMessageLocalised(self: IdeaStatiCaAppClient, severity: MessageSeverity, msg: LocalisedMessage) """
+    def SendMessageLocalised(self, severity, msg, suffix):
+        """ SendMessageLocalised(self: IdeaStatiCaAppClient, severity: MessageSeverity, msg: LocalisedMessage, suffix: str) """
         pass
 
     def SetStage(self, stage, stageMax, *__args):
         """ SetStage(self: IdeaStatiCaAppClient, stage: int, stageMax: int, name: str)SetStage(self: IdeaStatiCaAppClient, stage: int, stageMax: int, msg: LocalisedMessage) """
         pass
 
-    def SetStageLocalised(self, stage, stageMax, msg):
-        """ SetStageLocalised(self: IdeaStatiCaAppClient, stage: int, stageMax: int, msg: LocalisedMessage) """
+    def SetStageLocalised(self, stage, stageMax, msg, args):
+        """ SetStageLocalised(self: IdeaStatiCaAppClient, stage: int, stageMax: int, msg: LocalisedMessage, *args: Array[object]) """
         pass
 
     def SetStageProgress(self, percentage):
@@ -1791,10 +1672,8 @@ class IdeaStatiCaAppClient(ClientBase[IIdeaStaticaApp], ICommunicationObject, ID
         pass
 
     Channel = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Gets the inner channel used to send messages to variously configured service endpoints.
-
-
-
+    """Gets the inner channel used to send messages to variously configured service endpoints.
+
 """
 
     Service = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
@@ -1805,12 +1684,9 @@ class IdeaStatiCaClient(ClientBase[T], ICommunicationObject, IDisposable):
     """ IdeaStatiCaClient[T](binding: Binding, remoteAddress: EndpointAddress) """
     def CreateChannel(self, *args): #cannot find CLR method
         """
-        CreateChannel(self: ClientBase[T]) -> T
-
-        
-
-            Returns a new channel to the service.
-
+        CreateChannel(self: ClientBase[T]) -> T
+        
+            Returns a new channel to the service.
             Returns: A channel of the type of the service contract.
         """
         pass
@@ -1841,17 +1717,13 @@ class IdeaStatiCaClient(ClientBase[T], ICommunicationObject, IDisposable):
         pass
 
     Channel = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Gets the inner channel used to send messages to variously configured service endpoints.
-
-
-
+    """Gets the inner channel used to send messages to variously configured service endpoints.
+
 """
 
     Service = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Service(self: IdeaStatiCaClient[T]) -> T
-
-
-
+    """Get: Service(self: IdeaStatiCaClient[T]) -> T
+
 """
 
 
@@ -1892,8 +1764,8 @@ class IMemberHiddenCheck:
 
 class IProgressCallback:
     # no doc
-    def ExceptionMessage(self, function, message):
-        """ ExceptionMessage(self: IProgressCallback, function: str, message: str) """
+    def ExceptionMessage(self, function, exception):
+        """ ExceptionMessage(self: IProgressCallback, function: str, exception: Exception) """
         pass
 
     def IterationMessage(self, percent, message, iteration):
@@ -1912,12 +1784,9 @@ class IProgressCallback:
 class ISEventArgs(EventArgs):
     """ ISEventArgs() """
     Status = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Status(self: ISEventArgs) -> AppStatus
-
-
-
-Set: Status(self: ISEventArgs) = value
-
+    """Get: Status(self: ISEventArgs) -> AppStatus
+
+Set: Status(self: ISEventArgs) = value
 """
 
 
@@ -1930,52 +1799,24 @@ class ISEventHandler(MulticastDelegate, ICloneable, ISerializable):
 
     def CombineImpl(self, *args): #cannot find CLR method
         """
-        CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
-
-        
-
-            Combines this System.Delegate with the specified System.Delegate to 
-
-             form a new delegate.
-
-        
-
-        
-
-            follow: The delegate to combine with this delegate.
-
-            Returns: A delegate that is the new root of the System.MulticastDelegate 
-
-             invocation list.
+        CombineImpl(self: MulticastDelegate, follow: Delegate) -> Delegate
+        
+            Combines this System.Delegate with the specified System.Delegate to form a new delegate.
+        
+            follow: The delegate to combine with this delegate.
+            Returns: A delegate that is the new root of the System.MulticastDelegate invocation list.
         """
         pass
 
     def DynamicInvokeImpl(self, *args): #cannot find CLR method
         """
-        DynamicInvokeImpl(self: Delegate, args: Array[object]) -> object
-
-        
-
-            Dynamically invokes (late-bound) the method represented by the 
-
-             current delegate.
-
-        
-
-        
-
-            args: An array of objects that are the arguments to pass to the method 
-
-             represented by the current delegate.  
-
-         -or-  
-
-         ll, if the method 
-
-             represented by the current delegate does not require arguments.
-
-        
-
+        DynamicInvokeImpl(self: Delegate, args: Array[object]) -> object
+        
+            Dynamically invokes (late-bound) the method represented by the current delegate.
+        
+            args: An array of objects that are the arguments to pass to the method represented by the current delegate.  
+         -or-  
+         ll, if the method represented by the current delegate does not require arguments.
             Returns: The object returned by the method represented by the delegate.
         """
         pass
@@ -1986,16 +1827,9 @@ class ISEventHandler(MulticastDelegate, ICloneable, ISerializable):
 
     def GetMethodImpl(self, *args): #cannot find CLR method
         """
-        GetMethodImpl(self: MulticastDelegate) -> MethodInfo
-
-        
-
-            Returns a static method represented by the current 
-
-             System.MulticastDelegate.
-
-        
-
+        GetMethodImpl(self: MulticastDelegate) -> MethodInfo
+        
+            Returns a static method represented by the current System.MulticastDelegate.
             Returns: A static method represented by the current System.MulticastDelegate.
         """
         pass
@@ -2006,25 +1840,12 @@ class ISEventHandler(MulticastDelegate, ICloneable, ISerializable):
 
     def RemoveImpl(self, *args): #cannot find CLR method
         """
-        RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
-
-        
-
-            Removes an element from the invocation list of this 
-
-             System.MulticastDelegate that is equal to the specified delegate.
-
-        
-
-        
-
-            value: The delegate to search for in the invocation list.
-
-            Returns: If value is found in the invocation list for this instance, then a 
-
-             new System.Delegate without value in its invocation list; otherwise, 
-
-             this instance with its original invocation list.
+        RemoveImpl(self: MulticastDelegate, value: Delegate) -> Delegate
+        
+            Removes an element from the invocation list of this System.MulticastDelegate that is equal to the specified delegate.
+        
+            value: The delegate to search for in the invocation list.
+            Returns: If value is found in the invocation list for this instance, then a new System.Delegate without value in its invocation list; otherwise, this instance with its original invocation list.
         """
         pass
 
@@ -2044,45 +1865,33 @@ class ISEventHandler(MulticastDelegate, ICloneable, ISerializable):
 class LibraryItem(object):
     """ LibraryItem() """
     Group = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Group(self: LibraryItem) -> str
-
-
-
-Set: Group(self: LibraryItem) = value
-
+    """Get: Group(self: LibraryItem) -> str
+
+Set: Group(self: LibraryItem) = value
 """
 
     GroupId = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: GroupId(self: LibraryItem) -> str
-
-
-
-Set: GroupId(self: LibraryItem) = value
-
+    """Get: GroupId(self: LibraryItem) -> str
+
+Set: GroupId(self: LibraryItem) = value
 """
 
     Identifier = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Identifier(self: LibraryItem) -> str
-
-
-
-Set: Identifier(self: LibraryItem) = value
-
+    """Get: Identifier(self: LibraryItem) -> str
+
+Set: Identifier(self: LibraryItem) = value
 """
 
     Name = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Name(self: LibraryItem) -> str
-
-
-
-Set: Name(self: LibraryItem) = value
-
+    """Get: Name(self: LibraryItem) -> str
+
+Set: Name(self: LibraryItem) = value
 """
 
 
 
 class LocalisedMessage(Enum, IComparable, IFormattable, IConvertible):
-    """ enum LocalisedMessage, values: CancellingImport (7), ConvertingModelFromXML (17), CreatingConnection (8), FinishingImport (20), ImportFailed (12), ImportingConnections (2), ImportingGroups (0), ImportingIOMObject (9), ImportingMembers (1), ImportingStructuralModel (10), ImportStarted (11), InternalImport (14), InternalSync (3), Member (15), ModelImport (6), ModelPostProcess (13), ProcessingConnection (19), ProcessingSubstructure (18), SavingData (16), SavingProject (5), SciaSDKError (21), SyncingModel (4) """
+    """ enum LocalisedMessage, values: AwaitingUserSelection (22), CancellingImport (7), ConvertingModelFromXML (17), CreatingConnection (8), FinishingImport (20), ImportFailed (12), ImportingConnections (2), ImportingGroups (0), ImportingIOMObject (9), ImportingMembers (1), ImportingStructuralModel (10), ImportStarted (11), InternalImport (14), InternalSync (3), Member (15), ModelImport (6), ModelPostProcess (13), ProcessingConnection (19), ProcessingSubstructure (18), SavingData (16), SavingProject (5), SciaSDKError (21), SyncingModel (4) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2116,6 +1925,7 @@ class LocalisedMessage(Enum, IComparable, IFormattable, IConvertible):
     def __str__(self, *args): #cannot find CLR method
         pass
 
+    AwaitingUserSelection = None
     CancellingImport = None
     ConvertingModelFromXML = None
     CreatingConnection = None
@@ -2157,12 +1967,9 @@ class MemberHiddenCheckClient(ClientBase[IMemberHiddenCheck], ICommunicationObje
 
     def CreateChannel(self, *args): #cannot find CLR method
         """
-        CreateChannel(self: ClientBase[IMemberHiddenCheck]) -> IMemberHiddenCheck
-
-        
-
-            Returns a new channel to the service.
-
+        CreateChannel(self: ClientBase[IMemberHiddenCheck]) -> IMemberHiddenCheck
+        
+            Returns a new channel to the service.
             Returns: A channel of the type of the service contract.
         """
         pass
@@ -2197,10 +2004,8 @@ class MemberHiddenCheckClient(ClientBase[IMemberHiddenCheck], ICommunicationObje
         pass
 
     Channel = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Gets the inner channel used to send messages to variously configured service endpoints.
-
-
-
+    """Gets the inner channel used to send messages to variously configured service endpoints.
+
 """
 
     Service = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
@@ -2273,57 +2078,39 @@ class MessageSeverity(Enum, IComparable, IFormattable, IConvertible):
 class ModelBIM(object):
     """ ModelBIM() """
     Items = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Items(self: ModelBIM) -> List[BIMItemId]
-
-
-
-Set: Items(self: ModelBIM) = value
-
+    """Get: Items(self: ModelBIM) -> List[BIMItemId]
+
+Set: Items(self: ModelBIM) = value
 """
 
     Messages = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Messages(self: ModelBIM) -> OpenMessages
-
-
-
-Set: Messages(self: ModelBIM) = value
-
+    """Get: Messages(self: ModelBIM) -> OpenMessages
+
+Set: Messages(self: ModelBIM) = value
 """
 
     Model = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Model(self: ModelBIM) -> OpenModel
-
-
-
-Set: Model(self: ModelBIM) = value
-
+    """Get: Model(self: ModelBIM) -> OpenModel
+
+Set: Model(self: ModelBIM) = value
 """
 
     Project = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Project(self: ModelBIM) -> str
-
-
-
-Set: Project(self: ModelBIM) = value
-
+    """Get: Project(self: ModelBIM) -> str
+
+Set: Project(self: ModelBIM) = value
 """
 
     RequestedItems = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: RequestedItems(self: ModelBIM) -> RequestedItemsType
-
-
-
-Set: RequestedItems(self: ModelBIM) = value
-
+    """Get: RequestedItems(self: ModelBIM) -> RequestedItemsType
+
+Set: RequestedItems(self: ModelBIM) = value
 """
 
     Results = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: Results(self: ModelBIM) -> OpenModelResult
-
-
-
-Set: Results(self: ModelBIM) = value
-
+    """Get: Results(self: ModelBIM) -> OpenModelResult
+
+Set: Results(self: ModelBIM) = value
 """
 
 
@@ -2332,18 +2119,15 @@ class ProgressSender(ClientBase[IProgressCallback], ICommunicationObject, IDispo
     """ ProgressSender(id: str) """
     def CreateChannel(self, *args): #cannot find CLR method
         """
-        CreateChannel(self: ClientBase[IProgressCallback]) -> IProgressCallback
-
-        
-
-            Returns a new channel to the service.
-
+        CreateChannel(self: ClientBase[IProgressCallback]) -> IProgressCallback
+        
+            Returns a new channel to the service.
             Returns: A channel of the type of the service contract.
         """
         pass
 
-    def ExceptionMessage(self, function, message):
-        """ ExceptionMessage(self: ProgressSender, function: str, message: str) """
+    def ExceptionMessage(self, function, exception):
+        """ ExceptionMessage(self: ProgressSender, function: str, exception: Exception) """
         pass
 
     def GetDefaultValueForInitialization(self, *args): #cannot find CLR method
@@ -2380,10 +2164,8 @@ class ProgressSender(ClientBase[IProgressCallback], ICommunicationObject, IDispo
         pass
 
     Channel = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Gets the inner channel used to send messages to variously configured service endpoints.
-
-
-
+    """Gets the inner channel used to send messages to variously configured service endpoints.
+
 """
 
     Service = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
@@ -2391,7 +2173,7 @@ class ProgressSender(ClientBase[IProgressCallback], ICommunicationObject, IDispo
 
 
 class RequestedItemsType(Enum, IComparable, IFormattable, IConvertible):
-    """ enum RequestedItemsType, values: Connections (0), SingleConnection (2), Substructure (1) """
+    """ enum RequestedItemsType, values: ConcreteWall (4), Connections (0), SingleConnection (2), Substructure (1), WholeModel (3) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -2425,24 +2207,21 @@ class RequestedItemsType(Enum, IComparable, IFormattable, IConvertible):
     def __str__(self, *args): #cannot find CLR method
         pass
 
+    ConcreteWall = None
     Connections = None
     SingleConnection = None
     Substructure = None
     value__ = None
+    WholeModel = None
 
 
 class SerializableDictionary(Dictionary[TKey, TVal], IDictionary[TKey, TVal], ICollection[KeyValuePair[TKey, TVal]], IEnumerable[KeyValuePair[TKey, TVal]], IEnumerable, IDictionary, ICollection, IReadOnlyDictionary[TKey, TVal], IReadOnlyCollection[KeyValuePair[TKey, TVal]], ISerializable, IDeserializationCallback, IXmlSerializable):
     """
-    SerializableDictionary[TKey, TVal]()
-
-    SerializableDictionary[TKey, TVal](dictionary: IDictionary[TKey, TVal])
-
-    SerializableDictionary[TKey, TVal](comparer: IEqualityComparer[TKey])
-
-    SerializableDictionary[TKey, TVal](capacity: int)
-
-    SerializableDictionary[TKey, TVal](dictionary: IDictionary[TKey, TVal], comparer: IEqualityComparer[TKey])
-
+    SerializableDictionary[TKey, TVal]()
+    SerializableDictionary[TKey, TVal](dictionary: IDictionary[TKey, TVal])
+    SerializableDictionary[TKey, TVal](comparer: IEqualityComparer[TKey])
+    SerializableDictionary[TKey, TVal](capacity: int)
+    SerializableDictionary[TKey, TVal](dictionary: IDictionary[TKey, TVal], comparer: IEqualityComparer[TKey])
     SerializableDictionary[TKey, TVal](capacity: int, comparer: IEqualityComparer[TKey])
     """
     def __getitem__(self, *args): #cannot find CLR method
@@ -2460,18 +2239,12 @@ class SerializableDictionary(Dictionary[TKey, TVal], IDictionary[TKey, TVal], IC
     @staticmethod # known case of __new__
     def __new__(self, *__args):
         """
-        __new__(cls: type)
-
-        __new__(cls: type, dictionary: IDictionary[TKey, TVal])
-
-        __new__(cls: type, comparer: IEqualityComparer[TKey])
-
-        __new__(cls: type, capacity: int)
-
-        __new__(cls: type, dictionary: IDictionary[TKey, TVal], comparer: IEqualityComparer[TKey])
-
-        __new__(cls: type, capacity: int, comparer: IEqualityComparer[TKey])
-
+        __new__(cls: type)
+        __new__(cls: type, dictionary: IDictionary[TKey, TVal])
+        __new__(cls: type, comparer: IEqualityComparer[TKey])
+        __new__(cls: type, capacity: int)
+        __new__(cls: type, dictionary: IDictionary[TKey, TVal], comparer: IEqualityComparer[TKey])
+        __new__(cls: type, capacity: int, comparer: IEqualityComparer[TKey])
         __new__(cls: type, info: SerializationInfo, context: StreamingContext)
         """
         pass
@@ -2527,8 +2300,7 @@ class Tools(object):
     @staticmethod
     def ModelToXml(model):
         """
-        ModelToXml(model: List[ModelBIM]) -> str
-
+        ModelToXml(model: List[ModelBIM]) -> str
         ModelToXml(model: ModelBIM) -> str
         """
         pass

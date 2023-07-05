@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module IdeaStatiCa.Plugin.Grpc calls itself Grpc
-# from IdeaStatiCa.Plugin, Version=22.1.5.1060, Culture=neutral, PublicKeyToken=null
+# from IdeaStatiCa.Plugin, Version=23.0.2.1543, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -459,6 +459,10 @@ class GrpcBlobStorageService(object):
 
 class GrpcClient(object, IGrpcClient, IGrpcCommunicator, IGrpcService, IGrpcSender):
     """ GrpcClient(logger: IPluginLogger, maxDataLength: int) """
+    def ConnectAsync(self, requestStream, responseStream, context):
+        """ ConnectAsync(self: GrpcClient, requestStream: IAsyncStreamReader[GrpcMessage], responseStream: IServerStreamWriter[GrpcMessage], context: ServerCallContext) -> Task """
+        pass
+
     def RegisterHandler(self, handlerId, handler):
         """ RegisterHandler(self: GrpcClient, handlerId: str, handler: IGrpcMessageHandler) """
         pass
@@ -653,7 +657,10 @@ class GrpcReflectionServiceFactory(object):
 
 
 class GrpcServer(object, IGrpcServer, IGrpcCommunicator):
-    """ GrpcServer(logger: IPluginLogger, blobStorageProvider: IBlobStorageProvider, maxDataLength: int, chunkSize: int) """
+    """
+    GrpcServer(logger: IPluginLogger)
+    GrpcServer(logger: IPluginLogger, grpcService: IGrpcService, blobStorageProvider: IBlobStorageProvider, maxDataLength: int, chunkSize: int)
+    """
     def StartAsync(self, clientId, port):
         """ StartAsync(self: GrpcServer, clientId: str, port: int) -> Task """
         pass
@@ -667,8 +674,11 @@ class GrpcServer(object, IGrpcServer, IGrpcCommunicator):
         pass
 
     @staticmethod # known case of __new__
-    def __new__(self, logger, blobStorageProvider, maxDataLength, chunkSize):
-        """ __new__(cls: type, logger: IPluginLogger, blobStorageProvider: IBlobStorageProvider, maxDataLength: int, chunkSize: int) """
+    def __new__(self, logger, grpcService=None, blobStorageProvider=None, maxDataLength=None, chunkSize=None):
+        """
+        __new__(cls: type, logger: IPluginLogger)
+        __new__(cls: type, logger: IPluginLogger, grpcService: IGrpcService, blobStorageProvider: IBlobStorageProvider, maxDataLength: int, chunkSize: int)
+        """
         pass
 
     def __repr__(self, *args): #cannot find CLR method
@@ -681,7 +691,7 @@ class GrpcServer(object, IGrpcServer, IGrpcCommunicator):
 """
 
     GrpcService = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: GrpcService(self: GrpcServer) -> GrpcService
+    """Get: GrpcService(self: GrpcServer) -> IGrpcService
 
 """
 
@@ -758,6 +768,10 @@ class IGrpcSender:
 
 class IGrpcService(IGrpcSender):
     # no doc
+    def ConnectAsync(self, requestStream, responseStream, context):
+        """ ConnectAsync(self: IGrpcService, requestStream: IAsyncStreamReader[GrpcMessage], responseStream: IServerStreamWriter[GrpcMessage], context: ServerCallContext) -> Task """
+        pass
+
     def RegisterHandler(self, handlerId, handler):
         """ RegisterHandler(self: IGrpcService, handlerId: str, handler: IGrpcMessageHandler) """
         pass
@@ -787,7 +801,7 @@ class IGrpcServer(IGrpcCommunicator):
         pass
 
     GrpcService = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
-    """Get: GrpcService(self: IGrpcServer) -> GrpcService
+    """Get: GrpcService(self: IGrpcServer) -> IGrpcService
 
 """
 

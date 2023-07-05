@@ -11,7 +11,7 @@ import xml.etree.ElementTree as ET
 from pydea_statica.connection_client import *
 
 
-CONN_FILE = "./examples/IdeaStatiCaConnBatch/in_connections/TestConn1_Loading.ideaCon"
+CONN_FILE = "./examples/IdeaStatiCaDesignResistanceBatch/in_connections/C09-2053.ideaCon"
 WRITE_CONN_MODEL_DATA_XML = True
 WRITE_CONN_ALL_DATA_XML = True
 CALCULATE = False

@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module IdeaRS.OpenModel.Connection calls itself Connection
-# from IdeaRS.OpenModel, Version=22.1.5.1060, Culture=neutral, PublicKeyToken=null
+# from IdeaRS.OpenModel, Version=23.0.2.1543, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -534,6 +534,12 @@ Set: LoadCaseId(self: CheckResSummary) = value
     """Get: Name(self: CheckResSummary) -> str
 
 Set: Name(self: CheckResSummary) = value
+"""
+
+    Skipped = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+    """Get: Skipped(self: CheckResSummary) -> bool
+
+Set: Skipped(self: CheckResSummary) = value
 """
 
     UnityCheckMessage = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default

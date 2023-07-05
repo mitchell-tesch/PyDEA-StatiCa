@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module IdeaStatiCa.Plugin.ProjectContent calls itself ProjectContent
-# from IdeaStatiCa.Plugin, Version=22.1.5.1060, Culture=neutral, PublicKeyToken=null
+# from IdeaStatiCa.Plugin, Version=23.0.2.1543, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -132,16 +132,10 @@ class RemoteDataStream(MemoryStream, IDisposable):
         """
         MemberwiseClone(self: MarshalByRefObject, cloneIdentity: bool) -> MarshalByRefObject
         
-            Creates a shallow copy of the current System.MarshalByRefObject 
-             object.
+            Creates a shallow copy of the current System.MarshalByRefObject object.
         
-        
-            cloneIdentity: lse to delete the current System.MarshalByRefObject object's 
-             identity, which will cause the object to be assigned a new identity 
-             when it is marshaled across a remoting boundary. A value of lse is 
-             usually appropriate. ue to copy the current System.MarshalByRefObject 
-             object's identity to its clone, which will cause remoting client 
-             calls to be routed to the remote server object.
+            cloneIdentity: lse to delete the current System.MarshalByRefObject object's identity, which will cause the object to be assigned a new identity when it is marshaled across a remoting boundary. A value of lse is usually appropriate. 
+             ue to copy the current System.MarshalByRefObject object's identity to its clone, which will cause remoting client calls to be routed to the remote server object.
         
             Returns: A shallow copy of the current System.MarshalByRefObject object.
         MemberwiseClone(self: object) -> object

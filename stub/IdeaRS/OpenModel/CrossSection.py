@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module IdeaRS.OpenModel.CrossSection calls itself CrossSection
-# from IdeaRS.OpenModel, Version=22.1.5.1060, Culture=neutral, PublicKeyToken=null
+# from IdeaRS.OpenModel, Version=23.0.2.1543, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -237,12 +237,12 @@ class CrossSectionFactory(object):
 
     @staticmethod
     def FillComposedDblLt(css, *__args):
-        """ FillComposedDblLt(css: CrossSectionParameter, h: float, b: float, th: float, sh: float, dis: float, shortLegUp: bool, mirrorY: bool)FillComposedDblLt(css: CrossSectionParameter, name: str, distance: float, shortLegUp: bool, mirrorY: bool) """
+        """ FillComposedDblLt(css: CrossSectionParameter, h: float, b: float, th: float, sh: float, dis: float, shortLegUp: bool, mirrorY: bool)FillComposedDblLt(css: CrossSectionParameter, h: float, b: float, th: float, distance: float, shortLegUp: bool, mirrorY: bool)FillComposedDblLt(css: CrossSectionParameter, name: str, distance: float, shortLegUp: bool, mirrorY: bool) """
         pass
 
     @staticmethod
     def FillComposedDblLu(css, *__args):
-        """ FillComposedDblLu(css: CrossSectionParameter, h: float, b: float, th: float, sh: float, dis: float, shortLegUp: bool, mirrorY: bool)FillComposedDblLu(css: CrossSectionParameter, name: str, distance: float, shortLegUp: bool, mirrorY: bool) """
+        """ FillComposedDblLu(css: CrossSectionParameter, h: float, b: float, th: float, sh: float, dis: float, shortLegUp: bool, mirrorY: bool)FillComposedDblLu(css: CrossSectionParameter, h: float, b: float, th: float, distance: float, shortLegUp: bool, mirrorY: bool)FillComposedDblLu(css: CrossSectionParameter, name: str, distance: float, shortLegUp: bool, mirrorY: bool) """
         pass
 
     @staticmethod
@@ -252,7 +252,7 @@ class CrossSectionFactory(object):
 
     @staticmethod
     def FillComposedDblUo(css, *__args):
-        """ FillComposedDblUo(css: CrossSectionParameter, bt: float, bb: float, h: float, tb: float, tl: float, tr: float, dis: float)FillComposedDblUo(css: CrossSectionParameter, name: str, distance: float) """
+        """ FillComposedDblUo(css: CrossSectionParameter, bt: float, bb: float, h: float, tb: float, tl: float, tr: float, dis: float)FillComposedDblUo(css: CrossSectionParameter, b: float, h: float, tw: float, th: float, distance: float)FillComposedDblUo(css: CrossSectionParameter, name: str, distance: float) """
         pass
 
     @staticmethod
@@ -616,7 +616,7 @@ Set: Components(self: CrossSectionThermalAttribute) = value
 
 
 class CrossSectionType(Enum, IComparable, IFormattable, IConvertible):
-    """ enum CrossSectionType, values: BeamShapeBox (79), BeamShapeBox1 (80), BeamShapeIHaunchChamfer (76), BeamShapeIHaunchChamferAssym (77), BeamShapeIrevDegen (83), BeamShapeIrevDegenAdd (84), BeamShapeIZDegen (88), BeamShapeLDegen (89), BeamShapeRevU (78), BeamShapeTrevChamferHaunchD (82), BeamShapeTrevChamferHaunchS (81), BeamShapeTrevDegen (85), BeamShapeTrevDegenAdd (86), BeamShapeZDegen (87), Box2I (18), Box2L (21), Box2U (19), Box2U2PI (20), Box4L (22), BoxDelta (98), BoxFl (16), BoxTriangle (99), BoxWeb (17), CF2Co (100), CF2Cpo (105), CFC (93), CFCp (104), CFGeneral (103), CFL (95), CFLgen (102), CFOmega (97), CFRegPolygon (96), CFSigma (92), CFU (94), CFZ (90), CFZed (91), CHSg (34), CHSPar (101), CompositeBeamBox (53), CompositeBeamBox1 (54), CompositeBeamIgenT (55), CompositeBeamLLeft (56), CompositeBeamPlate (57), CompositeBeamRResT (58), CompositeBeamRResT1 (59), CompositeBeamRT (60), CompositeBeamShapeChamf (61), CompositeBeamShapeChamfAssym (62), CompositeBeamShapeIgen (63), CompositeBeamShapeIT (64), CompositeBeamShapeITAssym (65), CompositeBeamShapeTT (75), CompositeBeamTLeft (66), CompositeBeamTrapezoid (67), CompositeBeamTresT (68), CompositeBeamTrev (69), CompositeBeamTrevResI (70), CompositeBeamTrevResI1 (71), CompositeBeamTrevResR (72), CompositeBeamTrevResR1 (73), CompositeBeamTrevT (74), General (38), GeneralConcrete (52), GeneralSteel (51), Igh (29), Ign (28), Iw (23), Iwn (24), Lg (31), LgMirrored (32), O (26), OneComponentCss (0), Oval (37), Rect (27), RHSg (36), Rolled2I (39), RolledAngle (2), RolledCHS (5), RolledDoubleLt (10), RolledDoubleLu (11), RolledDoubleUc (8), RolledDoubleUo (7), RolledI (1), RolledIPar (13), RolledLPar (15), RolledRHS (6), RolledT (3), RolledTI (12), RolledU (4), RolledUPar (14), Sg (50), Tchamfer1 (46), Tchamfer2 (47), Tg (30), Tgrev (43), Trapezoid (40), TT (48), TT1 (49), Ttfh (41), Ttfhrev (44), Tw (25), Twh (42), Twhrev (45), Ug (33), UniqueName (1001), Zg (35) """
+    """ enum CrossSectionType, values: BeamShapeBox (79), BeamShapeBox1 (80), BeamShapeIHaunchChamfer (76), BeamShapeIHaunchChamferAssym (77), BeamShapeIrevDegen (83), BeamShapeIrevDegenAdd (84), BeamShapeIZDegen (88), BeamShapeLDegen (89), BeamShapeRevU (78), BeamShapeTrevChamferHaunchD (82), BeamShapeTrevChamferHaunchS (81), BeamShapeTrevDegen (85), BeamShapeTrevDegenAdd (86), BeamShapeZDegen (87), Box2I (18), Box2L (21), Box2U (19), Box2U2PI (20), Box4L (22), BoxDelta (98), BoxFl (16), BoxTriangle (99), BoxWeb (17), CF2Co (100), CF2Cpo (105), CFC (93), CFCp (104), CFGeneral (103), CFL (95), CFLgen (102), CFOmega (97), CFRegPolygon (96), CFRhs (106), CFSigma (92), CFU (94), CFZ (90), CFZed (91), CHSg (34), CHSPar (101), CompositeBeamBox (53), CompositeBeamBox1 (54), CompositeBeamIgenT (55), CompositeBeamLLeft (56), CompositeBeamPlate (57), CompositeBeamRResT (58), CompositeBeamRResT1 (59), CompositeBeamRT (60), CompositeBeamShapeChamf (61), CompositeBeamShapeChamfAssym (62), CompositeBeamShapeIgen (63), CompositeBeamShapeIT (64), CompositeBeamShapeITAssym (65), CompositeBeamShapeTT (75), CompositeBeamTLeft (66), CompositeBeamTrapezoid (67), CompositeBeamTresT (68), CompositeBeamTrev (69), CompositeBeamTrevResI (70), CompositeBeamTrevResI1 (71), CompositeBeamTrevResR (72), CompositeBeamTrevResR1 (73), CompositeBeamTrevT (74), General (38), GeneralConcrete (52), GeneralSteel (51), Igh (29), Ign (28), Iw (23), Iwn (24), Lg (31), LgMirrored (32), O (26), OneComponentCss (0), Oval (37), Rect (27), RHSg (36), Rolled2I (39), RolledAngle (2), RolledCHS (5), RolledDoubleLt (10), RolledDoubleLu (11), RolledDoubleUc (8), RolledDoubleUo (7), RolledI (1), RolledIPar (13), RolledLPar (15), RolledRHS (6), RolledT (3), RolledTI (12), RolledU (4), RolledUPar (14), Sg (50), Tchamfer1 (46), Tchamfer2 (47), Tg (30), Tgrev (43), Trapezoid (40), TT (48), TT1 (49), Ttfh (41), Ttfhrev (44), Tw (25), Twh (42), Twhrev (45), Ug (33), UniqueName (1001), Zg (35) """
     def __eq__(self, *args): #cannot find CLR method
         """ x.__eq__(y) <==> x==yx.__eq__(y) <==> x==yx.__eq__(y) <==> x==y """
         pass
@@ -682,6 +682,7 @@ class CrossSectionType(Enum, IComparable, IFormattable, IConvertible):
     CFLgen = None
     CFOmega = None
     CFRegPolygon = None
+    CFRhs = None
     CFSigma = None
     CFU = None
     CFZ = None

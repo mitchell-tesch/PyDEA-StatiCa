@@ -1,6 +1,6 @@
 # encoding: utf-8
 # module IdeaRS.OpenModel.Geometry2D calls itself Geometry2D
-# from IdeaRS.OpenModel, Version=22.1.5.1060, Culture=neutral, PublicKeyToken=null
+# from IdeaRS.OpenModel, Version=23.0.2.1543, Culture=neutral, PublicKeyToken=null
 # by generator 1.145
 # no doc
 # no imports
@@ -36,9 +36,8 @@ class Point(object):
     @staticmethod # known case of __new__
     def __new__(self, x, y):
         """
-        __new__[Point]() -> Point
-        
-        __new__(cls: type, x: float, y: float)
+        __new__(cls: type, x: float, y: float)
+        __new__[Point]() -> Point
         """
         pass
 
