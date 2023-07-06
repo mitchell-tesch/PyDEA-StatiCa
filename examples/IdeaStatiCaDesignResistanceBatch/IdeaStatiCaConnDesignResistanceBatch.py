@@ -20,9 +20,10 @@ from pydea_statica.connection_loading import *
 # Batching workbook configuration
 INPUT_SHEET = 'Main'
 HEADER_RANGE = 'B3:D3'
-
 RESULTS_START = 'F4'
 
+# Load cases to be kept - others will be deleted
+RETAINED_LOAD_CASES = ['2', '22', '23', '56', '57', '58', '59']
 
 def main():
     wb = xw.Book.caller()
@@ -54,6 +55,7 @@ def read_batching_workbook(wb : xw.Book):
 def process_connections(run_inputs, working_folder : Path):
     conn_client = ConnectionClient()
     in_conn_folder = working_folder.joinpath('in_connections')
+    out_conn_folder = working_folder.joinpath('out_connections')
     run_results = []
     for _r, run in enumerate(run_inputs):
         # open connection model
@@ -71,6 +73,21 @@ def process_connections(run_inputs, working_folder : Path):
             if conn_name == conn.name:
                 conn_index = index
                 break
+        print(f"\t> Removing non-critical load cases", end='')
+        # retrieve current loading cases from connection
+        conn_loading = conn_client.connections[conn_index].get_loading()
+        # determine reduced loading based on retained load cases
+        reduced_loading = []
+        for load_case in conn_loading:
+            if load_case.name in RETAINED_LOAD_CASES:
+                reduced_loading.append(load_case)
+        # assign reduced loading
+        conn_loading = conn_client.connections[conn_index].set_loading(reduced_loading)
+        # save connection file in out folder
+        out_conn_file = out_conn_folder.joinpath(conn_file_name)
+        out_conn_file = out_conn_file.with_name(out_conn_file.stem + '_critical-cases' + out_conn_file.suffix)
+        conn_client.save_as_project(str(out_conn_file))
+        print('done.')
         print(f"\t> Calculating connection model... this can take a few minutes...", end='')
         conn_client.connections[conn_index].calculate()
         conn_client.save_project()
