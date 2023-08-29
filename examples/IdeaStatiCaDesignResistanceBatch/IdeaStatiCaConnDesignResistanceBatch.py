@@ -23,7 +23,7 @@ HEADER_RANGE = 'B3:D3'
 RESULTS_START = 'F4'
 
 # Load cases to be kept - others will be deleted
-RETAINED_LOAD_CASES = ['2', '22', '23', '56', '57', '58', '59']
+RETAINED_LOAD_CASES = ['2']
 
 def main():
     wb = xw.Book.caller()
@@ -73,7 +73,7 @@ def process_connections(run_inputs, working_folder : Path):
             if conn_name == conn.name:
                 conn_index = index
                 break
-        print(f"\t> Removing non-critical load cases", end='')
+        print(f"\t> Removing non-critical load cases...", end='')
         # retrieve current loading cases from connection
         conn_loading = conn_client.connections[conn_index].get_loading()
         # determine reduced loading based on retained load cases
@@ -87,6 +87,9 @@ def process_connections(run_inputs, working_folder : Path):
         out_conn_file = out_conn_folder.joinpath(conn_file_name)
         out_conn_file = out_conn_file.with_name(out_conn_file.stem + '_critical-cases' + out_conn_file.suffix)
         conn_client.save_as_project(str(out_conn_file))
+        # close in file and reopen out file
+        conn_client.close_project()
+        conn_client.open_project(str(out_conn_file))
         print('done.')
         print(f"\t> Calculating connection model... this can take a few minutes...", end='')
         conn_client.connections[conn_index].calculate()
