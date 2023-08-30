@@ -23,7 +23,7 @@ HEADER_RANGE = 'B3:D3'
 RESULTS_START = 'F4'
 
 # Load cases to be kept - others will be deleted
-RETAINED_LOAD_CASES = ['2']
+RETAINED_LOAD_CASES = ['2', '22']
 
 def main():
     wb = xw.Book.caller()
